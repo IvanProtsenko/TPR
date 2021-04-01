@@ -6,7 +6,7 @@ import csv
 
 def importData():
     output = []
-    with open("input.csv") as csvfile:
+    with open("input_data.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for row in reader:
             output.append(row)
@@ -55,7 +55,7 @@ def firstSort(data):
     sorting = []
     working = data[:]
     output = [working[0]]
-    with open("first_in.csv") as csvfile:
+    with open("first_params.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for row in reader:
             sorting.append(row)
@@ -83,7 +83,7 @@ def secondSort(data):
     sorting = []
     working = data[:]
     output = [working[0]]
-    with open("second_in.csv") as csvfile:
+    with open("second_params.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for row in reader:
             sorting.append(row)
@@ -122,7 +122,7 @@ def thirdSort(data):
     sorting = []
     working = data[:]
     output = []
-    with open("third_in.csv") as csvfile:
+    with open("third_params.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for row in reader:
             for i in range(len(row)):
